@@ -31,7 +31,7 @@ for start_date in [dt(2020,9,1)+td(days=i) for i in range(395)]:
 	datelist = [start_date+td(hours=18) + i*td(hours=6) for i in range(0,4*ndays)]
 
 	handle = 'TC+KHGMEC_lstm'
-	fname = start_date.strftime('hindcasts/lstm_%Y%m%dT%H.csv')
+	fname = start_date.strftime('forecasts/lstm_%Y%m%dT%H.csv')
 
 	if os.path.isfile(fname):
 		continue

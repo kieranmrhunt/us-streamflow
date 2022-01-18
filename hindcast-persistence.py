@@ -19,7 +19,7 @@ for lead_time in lead_times:
 		datelist = [start_date+td(hours=18) + i*td(hours=6) for i in range(0,4*ndays)]
 
 		handle = 'TC+KHGMEC_lstm'
-		fname = start_date.strftime('hindcasts/persistence_%Y%m%dT%H.csv'.format(lead_time))
+		fname = start_date.strftime('forecasts/persistence_%Y%m%dT%H.csv'.format(lead_time))
 
 		if os.path.isfile(fname):
 			continue

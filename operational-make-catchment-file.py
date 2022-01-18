@@ -201,7 +201,7 @@ for index, station in station_data.iterrows():
 	
 	
 	
-	df.to_csv(compute_dir+"hindcast-catchment-data/{}{}.csv".format(station_code,dstring), date_format='%Y-%m-%dT%H', index=False)
+	df.to_csv(compute_dir+"forecast-catchment-data/{}{}.csv".format(station_code,dstring), date_format='%Y-%m-%dT%H', index=False)
 	
 		
 

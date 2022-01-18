@@ -7,10 +7,10 @@ from matplotlib.lines import Line2D
 
 #start_date = dt(dt.today().year, dt.today().month, dt.today().day)-td(days=10)
 start_date = dt(2021,5,1)
-raw_df = pd.read_csv(start_date.strftime('hindcasts/raw_%Y%m%dT%H.csv'))
-bc_df = pd.read_csv(start_date.strftime('hindcasts/bc_%Y%m%dT%H.csv'))
-lstm_df = pd.read_csv(start_date.strftime('hindcasts/lstm_%Y%m%dT%H.csv'))
-pers_df = pd.read_csv(start_date.strftime('hindcasts/persistence_%Y%m%dT%H.csv'))
+raw_df = pd.read_csv(start_date.strftime('forecasts/raw_%Y%m%dT%H.csv'))
+bc_df = pd.read_csv(start_date.strftime('forecasts/bc_%Y%m%dT%H.csv'))
+lstm_df = pd.read_csv(start_date.strftime('forecasts/lstm_%Y%m%dT%H.csv'))
+pers_df = pd.read_csv(start_date.strftime('forecasts/persistence_%Y%m%dT%H.csv'))
 
 obs_df = pd.read_csv('../compute/recent_obs.csv')
 

@@ -21,7 +21,7 @@ compute_dir = "/storage/shared/research/met/bitmap/mr806421/us-rivers/compute/"
 
 exp='lstm' #raw,bc,lstm
 
-flist = sorted(glob.glob("hindcasts/{}_*.csv".format(exp)))[:-1]
+flist = sorted(glob.glob("forecasts/{}_*.csv".format(exp)))[:-1]
 datelist = np.array([dt.strptime(f.split("/")[-1],"{}_%Y%m%dT%H.csv".format(exp)) for f in flist])
 
 xlabels={'BNDN5':0.02, 'ARWN8':0.02, 'TCCC1':0.65, 'CARO2':0.02, 'ESSC2':0.02, 'NFDC1':0.65, 'LABW4':0.02, 'CLNK1':0.02, 'TRAC2':0.02, 'NFSW4':0.02}

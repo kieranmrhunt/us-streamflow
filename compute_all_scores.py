@@ -32,7 +32,7 @@ for leadtime in np.arange(1,11):
 	for exp in exps:
 		scores = []
 			
-		flist = sorted(glob.glob("hindcasts/{}_*.csv".format(exp)))[:-1]
+		flist = sorted(glob.glob("forecasts/{}_*.csv".format(exp)))[:-1]
 		datelist = np.array([dt.strptime(f.split("/")[-1],"{}_%Y%m%dT%H.csv".format(exp)) for f in flist])
 		
 		start_date = datelist.min()

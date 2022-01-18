@@ -4,7 +4,7 @@ import os
 import subprocess
 import netCDF4 as nc
 from ecmwfapi import ECMWFService
-server = ECMWFService("mars", url="https://api.ecmwf.int/v1", key="dd4b49c80fa12f5585db5403385cd60f", email="g.matthews@ecmwf.int")
+server = ECMWFService("mars", url="https://api.ecmwf.int/v1", key="userkey", email="useremail")
 
 def glofas_mars_request(idate,model):
     """

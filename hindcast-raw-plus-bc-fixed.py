@@ -34,8 +34,8 @@ for start_date in [dt(2021,3,1)+td(days=i) for i in range(200)]:
 	gl_dates = num2date(gl_tobj[:], gl_tobj.units)
 	print(gl_dates)
 
-	f_raw = open(start_date.strftime('hindcasts/raw_%Y%m%dT%H.csv'), 'w+')
-	f_bc = open(start_date.strftime('hindcasts/bc_%Y%m%dT%H.csv'), 'w+')
+	f_raw = open(start_date.strftime('forecasts/raw_%Y%m%dT%H.csv'), 'w+')
+	f_bc = open(start_date.strftime('forecasts/bc_%Y%m%dT%H.csv'), 'w+')
 	f_raw.write('DateTime,LocationID,ForecastTime,VendorID,Value,Units\n')
 	f_bc.write('DateTime,LocationID,ForecastTime,VendorID,Value,Units\n')
 
