@@ -3,7 +3,6 @@ import numpy as np
 import pandas as pd
 from datetime import datetime as dt, timedelta as td
 import os
-import sys
 
 def fill_nans(y):
 	filled = y.astype(float)
@@ -13,10 +12,7 @@ def fill_nans(y):
 
 compute_dir = "/storage/shared/research/met/bitmap/mr806421/us-rivers/compute/"
 data_dir = '/home/users/rz908899/cluster/mr806421/us-rivers/daily-data/'
-
-idate = sys.argv[1]
-#start_date = dt(dt.today().year, dt.today().month, dt.today().day)
-start_date = dt.strptime(idate, "%Y%m%d")
+start_date = dt(dt.today().year, dt.today().month, dt.today().day)
 
 era_vars = [ 'total_precipitation', 'surface_runoff', 'sub_surface_runoff', 'runoff',
                   'volumetric_soil_water_layer_1', 'volumetric_soil_water_layer_2', 'volumetric_soil_water_layer_3', 'volumetric_soil_water_layer_4',
@@ -201,7 +197,7 @@ for index, station in station_data.iterrows():
 	
 	
 	
-	df.to_csv(compute_dir+"forecast-catchment-data/{}{}.csv".format(station_code,dstring), date_format='%Y-%m-%dT%H', index=False)
+	df.to_csv(compute_dir+"operational-catchment-data/{}{}.csv".format(station_code,dstring), date_format='%Y-%m-%dT%H', index=False)
 	
 		
 
